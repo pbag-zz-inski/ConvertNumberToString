@@ -12,4 +12,6 @@ class ConvertNumberToStringJsonViewTest(TestCase):
 
     def test_should_return_string_when_response_is_json(self):
         u"""Test sprawdzający poprawność konwersji z int na string oraz wyświetlenie odpowiedzi w formacie json."""
-        pass
+        response = self.client.post('/123/')
+        self.assertEqual(response.status_code, 200)
+        self.assertJSONEqual(response.content, {'123': 'one hundred and twenty-three'})
