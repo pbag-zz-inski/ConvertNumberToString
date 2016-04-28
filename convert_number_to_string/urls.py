@@ -17,4 +17,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^(?P<number>\d+)/$', 'convert_number_to_string.views.convert_number_to_string_json', name='convert_int'),
 ]

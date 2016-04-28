@@ -1,4 +1,5 @@
 Django==1.8.12
+inflect==0.2.5
 Morelia==0.6.1
 parse==1.6.6
 pep257==0.7.0
